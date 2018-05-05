@@ -25,7 +25,7 @@ public class Sharing : MonoBehaviour
 	{
 		SoundManager.GetInstance().PlayClickSound();
 #if UNITY_ANDROID
-		Application.CaptureScreenshot(screenshotFilename);
+		ScreenCapture.CaptureScreenshot(screenshotFilename);
 		StartCoroutine(SaveAndShare(screenshotFilename));
 #endif
 	}
